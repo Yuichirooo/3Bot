@@ -26,7 +26,7 @@ class LINE:
     self._session = requests.session()
     self._headers = {'X-Line-Application': 'IOSIPAD\t7.14.0\tiPhone OS\t10.12.0', 'X-Line-Access': 'Emp1jl3qOjxCjXEhmaN5.QdLXoVPaKOU6WpvD80Sijq.NcwnmLOaI/dIyi3Y84WTCOxbNTN27m3ODDpkMLDPY64=', 'User-Agent': 'Line/7.14.0'}
 
-  def login(self, mail=None, passwd=None, cert=None, token=None, qr=False, callback=None):
+  def login(self, mail=None, passwd=None, cert=None, token=None, qr=True, callback=None):
     if callback is None:
       callback = def_callback
     resp = self.__validate(mail,passwd,cert,token,qr)
@@ -461,7 +461,7 @@ class LINE:
 
       prof = self.getProfile()
 
-      print("One Piece BOT")
+      print("Bot Protect")
       print("mid -> " + prof.mid)
       print("Nama -> " + prof.displayName)
       print("Token -> " + self.authToken)
